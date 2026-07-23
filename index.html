@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconhecimento Facial</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+:root{--bg:#0f172a;--card:#1e293b;--texto:#fff;--destaque:#38bdf8;--sec:#cbd5e1}
+body{background:var(--bg);color:var(--texto);transition:.4s;line-height:1.6}
+.daltonico{--bg:#0b0f1a;--card:#1f2937;--texto:#fff;--destaque:#ff4d4d;--sec:#7CFC00}
+button{position:fixed;top:20px;right:20px;padding:12px 18px;border:none;border-radius:8px;background:var(--destaque);font-weight:bold;cursor:pointer}
+header{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1400&auto=format&fit=crop') center/cover}
+h1{font-size:56px;color:var(--destaque)}
+p{color:var(--sec)}
+section{padding:70px 10%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:var(--card);padding:25px;border-radius:14px}
+.card h3,h2{color:var(--destaque);margin-bottom:12px}
+footer{text-align:center;padding:20px;background:#020617}
+</style>
+</head>
+<body>
+<button id="modo">Modo Daltonismo</button>
+<header><div><h1>Reconhecimento Facial</h1><p>Tecnologia, funcionamento e desafios relacionados aos erros de identificação.</p></div></header>
+<section><h2>Como Funciona</h2><div class="cards">
+<div class="card"><h3>Captura</h3><p>O rosto é capturado por uma câmera.</p></div>
+<div class="card"><h3>Análise</h3><p>Características biométricas são comparadas.</p></div>
+<div class="card"><h3>Resultado</h3><p>O sistema identifica ou não a pessoa.</p></div>
+</div></section>
+<section><h2>Erros de Identificação</h2><div class="cards">
+<div class="card"><h3>Falsos Positivos</h3><p>Uma pessoa é confundida com outra.</p></div>
+<div class="card"><h3>Qualidade</h3><p>Iluminação e ângulo podem afetar o resultado.</p></div>
+<div class="card"><h3>Ética</h3><p>O uso deve respeitar privacidade e direitos.</p></div>
+</div></section>
+<footer>© 2026 Projeto Educacional</footer>
+<script>
+const b=document.getElementById('modo');
+b.onclick=()=>{document.body.classList.toggle('daltonico');b.textContent=document.body.classList.contains('daltonico')?'Modo Normal':'Modo Daltonismo';}
+</script>
+</body></html>
